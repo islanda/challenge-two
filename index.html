@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+    <title>Whoo Form</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
+</head>
+
+<body><!-- CSS:blue bkgd -->
+
+	<container><!-- CSS:rounded corners -->
+		
+		<header><!-- CSS:dark blue bkgd -->
+			<h1>Sign up for Whoo!</h1>
+			<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
+		</header>
+
+		<form>
+			<!-- Direct children of FORM elements have to be block-level elements.
+			If you want it to read as a set of statements, use multiple p elements. -->
+
+			<fieldset>
+		    	<!-- 1. Add with CSS-->
+		    	<legend>First, name your portfolio</legend>
+		    	<!-- Make the lengend hidden in css? -->
+		    	<p>
+			    	<label for="portfolio-name">Portfolio Name</label>
+			    	<input type="text" name="portfolio-name" id="portfolio-name" aria-required="true" />
+			    	<label for="portfolio-address">Portfolio Address</label>
+			    	<input type="text" name="portfolio-address" id="portfolio-address" aria-required="true" />
+			    	<span>.sample.com</span>
+				</p> <!-- Make this gray bkgd -->
+		    </fieldset>
+
+		    <fieldset>
+		    	<!-- 2. Add with CSS-->
+		      	<legend>Now, enter your accounts details</legend>
+				<p>					
+					<label for="name">Name</label> 
+			    	<input type="text" name ="name" id="name" aria-required="true" />
+			    	
+			    	<label for="email">Email</label>
+					<input type="email" name="email" id="email" aria-required="true" />	
+					<p>NOTE: We'll never share your email, promise.</p>
+			    	
+			    	<label for="password">Password</label>
+					<input type="password" name="password" id="password" aria-required="true" />
+				</p>
+		    </fieldset>
+
+		    <fieldset>
+		    	<!-- 3. Add with CSS-->
+		    	<legend>Finally, enter your payment information</legend>
+				<p>
+					<label for="card">Card Number</label>
+					<input type="text" name="card" id="card" aria-required="true" />
+
+					<label for="code">Security Code</label>
+				    <input type="text" name="code" id="code" aria-required="true" />
+					<img src="assets/images/sprite.png" alt="image of credit card.">
+			    </p>
+			    
+			    <p>Expiration Date</p>
+			    <p>
+					<select title="month" id="month" name="month">
+				        <option value="month">Month</option>
+				        <option value="jan">January</option>
+				        <option value="feb">February</option>
+				        <option value="mar">March</option>
+				        <option value="apr">April</option>
+				        <option value="may">May</option>
+				        <option value="jun">June</option>
+				        <option value="jul">July</option>
+				        <option value="aug">August</option>
+				        <option value="sep">September</option>
+				        <option value="oct">October</option>
+				        <option value="nov">November</option>
+				        <option value="dec">December</option>
+				    </select>
+
+				    <select id="year" name="year">
+				        <option value="year">Year</option>
+				        <option value="2015">2015</option>
+				        <option value="2016">2016</option>
+				        <option value="2017">2017</option>
+				        <option value="2018">2018</option>
+				        </select>
+			    </p>
+				</fieldset>
+			
+			<p>
+		    	<button>Create your portfolio</button>
+			</p>
+		
+		</form>
+
+	</container>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

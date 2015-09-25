@@ -28,10 +28,10 @@
 		    	<!-- Make the lengend hidden in css? -->
 		    	<p>
 			    	<label for="portfolio-name">Portfolio Name</label>
-			    	<input type="text" name="portfolio-name" id="portfolio-name" aria-required="true" />
+			    	<input type="text" name="portfolio-name" id="portfolio-name" required aria-required="true" />
 			    	<label for="portfolio-address">Portfolio Address</label>
-			    	<input type="text" name="portfolio-address" id="portfolio-address" aria-required="true" />
-			    	<span>.sample.com</span>
+			    	<input type="text" name="portfolio-address" id="portfolio-address" required aria-required="true" />
+			    	<label for="portfolio-address">.sample.com</label>
 				</p> <!-- Make this gray bkgd -->
 		    </fieldset>
 
@@ -40,14 +40,14 @@
 		      	<legend>Now, enter your accounts details</legend>
 				<p>					
 					<label for="name">Name</label> 
-			    	<input type="text" name ="name" id="name" aria-required="true" />
+			    	<input type="text" name ="name" id="name" required aria-required="true" />
 			    	
 			    	<label for="email">Email</label>
-					<input type="email" name="email" id="email" aria-required="true" />	
-					<p>NOTE: We'll never share your email, promise.</p>
+					<input type="email" name="email" id="email" required aria-required="true" />	
+					<label for="email">NOTE: We'll never share your email, promise.</label>
 			    	
 			    	<label for="password">Password</label>
-					<input type="password" name="password" id="password" aria-required="true" />
+					<input type="password" name="password" id="password" required aria-required="true" />
 				</p>
 		    </fieldset>
 
@@ -56,40 +56,42 @@
 		    	<legend>Finally, enter your payment information</legend>
 				<p>
 					<label for="card">Card Number</label>
-					<input type="text" name="card" id="card" aria-required="true" />
+					<input type="text" name="card" id="card" required aria-required="true" />
 
 					<label for="code">Security Code</label>
-				    <input type="text" name="code" id="code" aria-required="true" />
+				    <input type="text" name="code" id="code" required aria-required="true" />
 					<img src="assets/images/sprite.png" alt="image of credit card.">
-			    </p>
-			    
-			    <p>Expiration Date</p>
-			    <p>
-					<select title="month" id="month" name="month">
-				        <option value="month">Month</option>
-				        <option value="jan">January</option>
-				        <option value="feb">February</option>
-				        <option value="mar">March</option>
-				        <option value="apr">April</option>
-				        <option value="may">May</option>
-				        <option value="jun">June</option>
-				        <option value="jul">July</option>
-				        <option value="aug">August</option>
-				        <option value="sep">September</option>
-				        <option value="oct">October</option>
-				        <option value="nov">November</option>
-				        <option value="dec">December</option>
-				    </select>
+			    </p><!-- Make each cc image a radio button and use sprite in css -->
 
-				    <select id="year" name="year">
-				        <option value="year">Year</option>
-				        <option value="2015">2015</option>
-				        <option value="2016">2016</option>
-				        <option value="2017">2017</option>
-				        <option value="2018">2018</option>
+			    <fieldset>
+			    	<legend>Expiration Date</legend>
+					<p>
+						<select id="month" name="month" required aria-required>
+					        <option value="month" selected disabled>Month</option>
+					        <option value="jan">January</option>
+					        <option value="feb">February</option>
+					        <option value="mar">March</option>
+					        <option value="apr">April</option>
+					        <option value="may">May</option>
+					        <option value="jun">June</option>
+					        <option value="jul">July</option>
+					        <option value="aug">August</option>
+					        <option value="sep">September</option>
+					        <option value="oct">October</option>
+					        <option value="nov">November</option>
+					        <option value="dec">December</option>
+					    </select>
+
+				    	<select id="year" name="year" required aria-required>
+					        <option value selected disabled="year">Year</option>
+					        <option value="2015">2015</option>
+					        <option value="2016">2016</option>
+					        <option value="2017">2017</option>
+					        <option value="2018">2018</option>
 				        </select>
-			    </p>
+			    	</p>
 				</fieldset>
+			</fieldset>
 			
 			<p>
 		    	<button>Create your portfolio</button>

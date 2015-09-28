@@ -1,1 +1,89 @@
 /* Your CSS goes here */
+body {
+	background: #b3e3ff;
+	color: #111111;
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px 0;
+}
+
+form {
+	background: #fff;
+	border-radius: 0px 0px 10px 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	-webkit-border-radius: 0px 0px 10px 10px;	
+	margin: 0 auto;
+	padding: 25px;
+	width: 500px;
+}
+
+header {
+	background: #15718c;
+	border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	margin: 0 auto;
+	padding: 5px 25px;
+	width: 500px;
+}
+
+h1 {
+	color: #fff;
+	font-family: 'Merriweather', serif;	
+	font-size: 2em;
+}
+
+header p{
+	color: #b3e3ff;
+	font-size: .7em;
+	font-weight: bold;
+	margin-top: -20px; 
+}
+
+fieldset {
+	border: none;
+}
+
+.sections {
+	background: #eee;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	padding: 10px;
+}
+
+li {
+	list-style: none;
+	font-size: .7em;
+	padding: 10px 20px;
+}
+
+input {
+	border: none;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;	
+	display: block;
+	height: 25px;
+	width: 100%;
+	margin: 10px 0;
+}
+
+.steps {
+	color: #15718c;
+	font-family: 'Merriweather', serif;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#steps {
+	float:left;
+}
+
+.card-type {
+	display: none;
+}
+
+.card {
+	float: left;
+}
+

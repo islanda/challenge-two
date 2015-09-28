@@ -75,10 +75,6 @@ input {
 	font-weight: bold;
 }
 
-#steps {
-	float:left;
-}
-
 .card-type {
 	display: none;
 }

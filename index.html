@@ -9,14 +9,11 @@
 	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
-
 </head>
 
-<body><!-- CSS:blue bkgd -->
-
-	<container><!-- CSS:rounded corners -->
-		
-		<header><!-- CSS:dark blue bkgd -->
+<body>
+	<container>	
+		<header>
 			<h1>Sign up for Whoo!</h1>
 			<p>50 projects, 500 images, 10 videos, domain binding, and technical support.</p>
 		</header>
@@ -24,9 +21,9 @@
 		<form>
 			<fieldset>
 		    	<!-- 1. Add with CSS-->
-		    	<legend class="steps">First, name your portfolio</legend>
+		    	<legend class="section-title">First, name your portfolio</legend>
 		    	<!-- Make the lengend hidden in css? -->
-		    	<ol class="sections">
+		    	<ul class="sections">
 			    	<li>
 				    	<label for="portfolio-name">Portfolio Name</label>
 				    	<input type="text" name="portfolio-name" id="portfolio-name" required aria-required="true" />
@@ -36,13 +33,13 @@
 				    	<input type="text" name="portfolio-address" id="portfolio-address" required aria-required="true" />
 			    		<label for="portfolio-address" id="sample">.sample.com</label>
 			    	</li>
-				</ol> <!-- Make this gray bkgd -->
+				</ul> <!-- Make this gray bkgd -->
 		    </fieldset>
 
 		    <fieldset>
 		    	<!-- 2. Add with CSS-->
-		      	<legend class="steps">Now, enter your accounts details</legend>
-				<ol class="sections">					
+		      	<legend class="section-title">Now, enter your accounts details</legend>
+				<ul class="sections">					
 					<li>
 						<label for="name">Name</label> 
 				    	<input type="text" name ="name" id="name" required aria-required="true" />
@@ -56,49 +53,37 @@
 			    		<label for="password">Password</label>
 						<input type="password" name="password" id="password" required aria-required="true" />
 					</li>
-				</ol>
+				</ul>
 		    </fieldset>
 
 		    <fieldset>
 		    	<!-- 3. Add with CSS-->
-		    	<legend class="steps">Finally, enter your payment information</legend>
-				<ol class="sections">
-					<li class="card">
+		    	<legend class="section-title">Finally, enter your payment information</legend>
+                
+				<ul class="sections">
+					<li class="card-number">
 						<label for="card">Card Number</label>
 						<input type="text" name="card" id="card" required aria-required="true" />
 					</li>
-					<li="card">
-						<fieldset>
-							<legend class="card-type">Card Type</legend>
-							<ol>
-								<li>
-									<input type="radio" name="card-type" id="amex" />
-									<label for=amex>AMEX</label>
-								</li>
-								<li>
-									<input type="radio" name="card-type" id="visa" />
-									<label for=visa>VISA</label>
-								</li>
-								<li>
-									<input type="radio" name="card-type" id="discover" />
-									<label for=discover>Discover</label>
-								</li>
-								<li>
-									<input type="radio" name="card-type" id="mastercard" />
-									<label for=mastercard>Master Card</label>
-								</li>
-							</ol>	
-						</fieldset>
+                    
+					<li class="credit-cards">
+						<input type="radio" name="card-type" id="amex" />
+						<label for=visa>AMEX</label>
+						<input type="radio" name="card-type" id="visa" />
+						<label for=visa>Visa</label>
+						<input type="radio" name="card-type" id="discover" />
+						<label for=visa>Discover</label>
+						<input type="radio" name="card-type" id="mastercard" />
+						<label for=visa>MC</label>
 					</li>
-					<br>
-					<li>
+                    
+					<li class="security"> 
 						<label for="code">Security Code</label>
 						<input type="text" name="code" id="code" required aria-required="true" />
 					</li>
 					<!-- <img src="assets/images/sprite.png" alt="image of credit card."> -->
-			    	<!-- Make each cc image a radio button and use sprite in css -->   
 					<li>
-						<fieldset>
+						<fieldset class="expdate">
 					    	<legend>Expiration Date</legend>
 							<select id="month" name="month" required aria-required>
 							    <option value="month" selected disabled>Month</option>
@@ -125,13 +110,12 @@
 						    </select>
 						</fieldset>
 					</li>
-				</ol>	
+				</ul>	
 			</fieldset>
-			
-			<p>
+
+		    <fieldset>
 		    	<button type=submit>Create your portfolio</button>
-			</p>
-		
+		    </fieldset>
 		</form>
 
 	</container>

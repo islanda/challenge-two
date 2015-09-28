@@ -9,18 +9,20 @@ body {
 form {
 	background: #fff;
 	border-radius: 0px 0px 10px 10px;
-	-moz-border-radius: 0px 0px 10px 10px;
-	-webkit-border-radius: 0px 0px 10px 10px;	
+	border-radius: -webkit-border-radius: 0px 0px 10px 10px;	
+	border-radius:    -moz-border-radius: 0px 0px 10px 10px;
 	margin: 0 auto;
 	padding: 25px;
 	width: 500px;
+	counter-reset: fieldsets;
+
 }
 
 header {
 	background: #15718c;
 	border-radius: 10px 10px 0px 0px;
-	-moz-border-radius: 10px 10px 0px 0px;
-	-webkit-border-radius: 10px 10px 0px 0px;
+	border-radius: -webkit-border-radius: 0px 0px 10px 10px;	
+	border-radius:    -moz-border-radius: 0px 0px 10px 10px;
 	margin: 0 auto;
 	padding: 5px 25px;
 	width: 500px;
@@ -43,11 +45,22 @@ fieldset {
 	border: none;
 }
 
+form > fieldset > legend:before {
+	background: #15718c;
+	color: white;
+	content: " " counter(fieldsets) " ";
+	counter-increment: fieldsets;
+	padding: 5px;
+	border-radius: 50%;
+	border-radius: -webkit-border-radius: 50%;	
+	border-radius:    -moz-border-radius: 50%;
+}
+
 .sections {
 	background: #eee;
 	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;	
+	border-radius: -webkit-border-radius: 5px;	
+	border-radius:    -moz-border-radius: 5px;
 	padding: 10px;
 }
 
@@ -60,26 +73,84 @@ li {
 input {
 	border: none;
 	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;	
-	display: block;
-	height: 25px;
+	border-radius: -webkit-border-radius: 3px;	
+	border-radius:    -moz-border-radius: 3px;
+	height: 20px;
 	width: 100%;
 	margin: 10px 0;
 }
 
-.steps {
+.section-title {
 	color: #15718c;
 	font-family: 'Merriweather', serif;
 	font-size: 1em;
 	font-weight: bold;
 }
 
-.card-type {
-	display: none;
+#sample {
+	background: #fafafa;
+	border-left: 1px solid #eee;
+	border-radius:  0 3px 3px 0;
+	border-radius: -webkit-border-radius: 0 3px 3px 0;	
+	border-radius:    -moz-border-radius: 0 3px 3px 0;
+	color: #b2b2b2;
+	float: right;
+	font-size: 1.25em;
+	margin: -32px -2px;
+	padding: 3px 30px;
+	position: relative;
 }
 
-.card {
+.card-number, .credit-cards {
 	float: left;
 }
 
+#card {
+    width: 60%;
+}
+
+.credit-cards {
+    display: inline;
+}
+
+.credit-cards label {
+	display: inline-block;
+} 
+
+.credit-cards input[type=radio] {
+    margin:10px;
+    position: absolute;
+}
+
+.security {
+    float: left;
+    width: 100%
+}
+
+.security input{
+	display: block;
+	width: 50px;
+}
+
+.expdate{
+	margin-left: -10px; 
+}
+
+button {
+	background: #7e9935;
+	background: -webkit-linear-gradient(#aabd62, #7e9935);
+	background:    -moz-linear-gradient(#aabd62, #7e9935);
+	background:         linear-gradient(#aabd62, #7e9935);
+	border: 1px solid #7e9935;
+	border-radius: 5px;
+	border-radius: -webkit-border-radius: 5px;	
+	border-radius:    -moz-border-radius: 5px;
+	color: white;
+	font-family:'Merriweather', serif;
+	font-size: .75em;
+	font-weight: bold;	
+	margin: 100 ;
+	padding: 10px;
+
+
+}

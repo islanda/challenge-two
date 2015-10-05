@@ -1,4 +1,3 @@
-/* Your CSS goes here */
 body {
 	background: #b3e3ff;
 	color: #111111;
@@ -8,21 +7,20 @@ body {
 
 form {
 	background: #fff;
-	border-radius: 0px 0px 10px 10px;
-	border-radius: -webkit-border-radius: 0px 0px 10px 10px;	
 	border-radius:    -moz-border-radius: 0px 0px 10px 10px;
+	border-radius: -webkit-border-radius: 0px 0px 10px 10px;	
+	border-radius: 0px 0px 10px 10px;
+	counter-reset: fieldsets;
 	margin: 0 auto;
 	padding: 25px;
 	width: 500px;
-	counter-reset: fieldsets;
-
 }
 
 header {
 	background: #15718c;
-	border-radius: 10px 10px 0px 0px;
-	border-radius: -webkit-border-radius: 0px 0px 10px 10px;	
 	border-radius:    -moz-border-radius: 0px 0px 10px 10px;
+	border-radius: -webkit-border-radius: 0px 0px 10px 10px;	
+	border-radius: 10px 10px 0px 0px;
 	margin: 0 auto;
 	padding: 5px 25px;
 	width: 500px;
@@ -34,9 +32,9 @@ h1 {
 	font-size: 2em;
 }
 
-header p{
+header p {
 	color: #b3e3ff;
-	font-size: .7em;
+	font-size: .75em;
 	font-weight: bold;
 	margin-top: -20px; 
 }
@@ -47,37 +45,52 @@ fieldset {
 
 form > fieldset > legend:before {
 	background: #15718c;
+	border-radius:    -moz-border-radius: 50%;
+	border-radius: -webkit-border-radius: 50%;	
+	border-radius: 50%;
+	border: 5px solid white;
 	color: white;
 	content: " " counter(fieldsets) " ";
 	counter-increment: fieldsets;
-	padding: 5px;
-	border-radius: 50%;
-	border-radius: -webkit-border-radius: 50%;	
-	border-radius:    -moz-border-radius: 50%;
+	display: inline-block;
+	margin:  0 25px 0 -60px;
+	padding: 5px 10px;
 }
 
 .sections {
 	background: #eee;
-	border-radius: 5px;
-	border-radius: -webkit-border-radius: 5px;	
 	border-radius:    -moz-border-radius: 5px;
+	border-radius: -webkit-border-radius: 5px;	
+	border-radius: 5px;
+	margin-top: -5px;
 	padding: 10px;
 }
 
 li {
+	font-size: .75em;
 	list-style: none;
-	font-size: .7em;
 	padding: 10px 20px;
 }
 
 input {
-	border: none;
-	border-radius: 3px;
-	border-radius: -webkit-border-radius: 3px;	
 	border-radius:    -moz-border-radius: 3px;
+	border-radius: -webkit-border-radius: 3px;	
+	border-radius: 3px;
+	border: none;
 	height: 20px;
-	width: 100%;
 	margin: 10px 0;
+	width: 100%;
+}
+
+/*validation*/
+input:focus:required:invalid {
+	background: url('../images/sprite.png') no-repeat right -190px;
+	background-color: #fff;
+}
+
+input:required:valid {
+	background: url('../images/sprite.png') no-repeat right -165px;
+	background-color: #fff;
 }
 
 .section-title {
@@ -87,70 +100,122 @@ input {
 	font-weight: bold;
 }
 
+/*section 1*/
+#portfolio-address {
+	display: block;
+	width: 65%;
+}
+
 #sample {
 	background: #fafafa;
 	border-left: 1px solid #eee;
-	border-radius:  0 3px 3px 0;
-	border-radius: -webkit-border-radius: 0 3px 3px 0;	
 	border-radius:    -moz-border-radius: 0 3px 3px 0;
+	border-radius: -webkit-border-radius: 0 3px 3px 0;	
+	border-radius: 0 3px 3px 0;
 	color: #b2b2b2;
 	float: right;
 	font-size: 1.25em;
+	height: 18px;
 	margin: -32px -2px;
-	padding: 3px 30px;
+	padding: 2px;
 	position: relative;
+	text-align: center;
+	width: 34%;
 }
 
-.card-number, .credit-cards {
+/*section 2*/
+.note {
+	color: #777;
+	font-size: .9em;
+}
+
+/*section 3*/
+.card-number, label div {
 	float: left;
+
 }
 
-#card {
-    width: 60%;
+.card-number {
+	width: 40%;
 }
 
+/*credit cards*/
 .credit-cards {
-    display: inline;
+	padding-top: 22px;
+	margin-bottom: 40px;
 }
 
-.credit-cards label {
-	display: inline-block;
-} 
-
-.credit-cards input[type=radio] {
-    margin:10px;
-    position: absolute;
+label div {
+	height: 30px;
+	margin: 3px;
+	width: 44px;
 }
 
-.security {
-    float: left;
-    width: 100%
+label[for=americanexpress] div {
+	background: url('../images/sprite.png') no-repeat left 0;
+	opacity: .5;
 }
 
-.security input{
+label[for=visa] div {
+	background: url('../images/sprite.png') no-repeat -46px 0;
+	opacity: .5;
+}
+
+label[for=discover] div {
+	background: url('../images/sprite.png') no-repeat -94px 0;
+	opacity: .5;
+}
+
+label[for=mastercard] div {
+	background: url('../images/sprite.png') no-repeat -142px 0;
+	opacity: .5;
+}
+
+label > input {
+  display:none;
+  position: absolute;
+}
+
+label > input:checked + div {
+  border: 2px solid #b3e3ff;
+  opacity: 1;
+}
+
+.security input {
 	display: block;
 	width: 50px;
 }
 
-.expdate{
+.security div {
+/*	background: url('../images/sprite.png') no-repeat  0 -81px;
+*/	background: url('../images/sprite.png') no-repeat  0 -124px;
+	height: 33px;
+	width: 68px;
+}
+
+
+.expdate {
 	margin-left: -10px; 
 }
 
+/*submit button*/
+.btn {
+	text-align: center;
+}
+
 button {
-	background: #7e9935;
-	background: -webkit-linear-gradient(#aabd62, #7e9935);
-	background:    -moz-linear-gradient(#aabd62, #7e9935);
-	background:         linear-gradient(#aabd62, #7e9935);
-	border: 1px solid #7e9935;
-	border-radius: 5px;
-	border-radius: -webkit-border-radius: 5px;	
+	background: #7f9b33;
+	background:         radial-gradient(#90a932, #7f9b33);
+	background:    -moz-radial-gradient(#90a932, #7f9b33);
+	background: -webkit-radial-gradient(#90a932, #7f9b33);	
 	border-radius:    -moz-border-radius: 5px;
+	border-radius: -webkit-border-radius: 5px;	
+	border-radius: 5px;
+	border: 1px solid #7e9935;
 	color: white;
 	font-family:'Merriweather', serif;
 	font-size: .75em;
 	font-weight: bold;	
 	margin: 100 ;
 	padding: 10px;
-
-
 }

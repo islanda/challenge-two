@@ -20,9 +20,7 @@
 
 		<form>
 			<fieldset>
-		    	<!-- 1. Add with CSS-->
 		    	<legend class="section-title">First, name your portfolio</legend>
-		    	<!-- Make the lengend hidden in css? -->
 		    	<ul class="sections">
 			    	<li>
 				    	<label for="portfolio-name">Portfolio Name</label>
@@ -30,14 +28,13 @@
 				    </li>	
 			    	<li>
 				    	<label for="portfolio-address">Portfolio Address</label>
-				    	<input type="text" name="portfolio-address" id="portfolio-address" required aria-required="true" />
+				    	<input type="text" name="portfolio-address" id="portfolio-address" maxlength="40" required aria-required="true" />
 			    		<label for="portfolio-address" id="sample">.sample.com</label>
 			    	</li>
-				</ul> <!-- Make this gray bkgd -->
+				</ul> 
 		    </fieldset>
 
 		    <fieldset>
-		    	<!-- 2. Add with CSS-->
 		      	<legend class="section-title">Now, enter your accounts details</legend>
 				<ul class="sections">					
 					<li>
@@ -47,7 +44,7 @@
 			    	<li>
 				    	<label for="email">Email</label>
 						<input type="email" name="email" id="email" required aria-required="true" />	
-						<label for="email">NOTE: We'll never share your email, promise.</label>
+						<label for="email" class="note">NOTE: We'll never share your email, promise.</label>
 			    	</li>
 			    	<li>
 			    		<label for="password">Password</label>
@@ -57,29 +54,36 @@
 		    </fieldset>
 
 		    <fieldset>
-		    	<!-- 3. Add with CSS-->
 		    	<legend class="section-title">Finally, enter your payment information</legend>
-                
 				<ul class="sections">
-					<li class="card-number">
+					<li class=" card-number">
 						<label for="card">Card Number</label>
-						<input type="text" name="card" id="card" required aria-required="true" />
+						<input type="text" name="card" id="card" maxlength="20" required aria-required="true" />
 					</li>
-                    
+
 					<li class="credit-cards">
-						<input type="radio" name="card-type" id="amex" />
-						<label for=visa>AMEX</label>
-						<input type="radio" name="card-type" id="visa" />
-						<label for=visa>Visa</label>
-						<input type="radio" name="card-type" id="discover" />
-						<label for=visa>Discover</label>
-						<input type="radio" name="card-type" id="mastercard" />
-						<label for=visa>MC</label>
-					</li>
-                    
+						<label for=americanexpress>
+							<input type="radio" name="card-type" id="americanexpress" />
+							<div></div>		
+						</label>					  
+						<label for=visa>
+							<input type="radio" name="card-type" id="visa" />
+							<div></div>	
+						</label>
+						<label for=discover>
+							<input type="radio" name="card-type" id="discover" />
+							<div></div>	
+						</label>
+						<label for=mastercard>
+							<input type="radio" name="card-type" id="mastercard" />
+							<div></div>	
+						</label>
+                    </li>
+
 					<li class="security"> 
 						<label for="code">Security Code</label>
-						<input type="text" name="code" id="code" required aria-required="true" />
+						<input type="text" name="code" id="code" maxlength="4" required aria-required="true" />
+						<div></div>	
 					</li>
 					<!-- <img src="assets/images/sprite.png" alt="image of credit card."> -->
 					<li>
@@ -113,9 +117,9 @@
 				</ul>	
 			</fieldset>
 
-		    <fieldset>
+		    <div class="btn">
 		    	<button type=submit>Create your portfolio</button>
-		    </fieldset>
+			</div>
 		</form>
 
 	</container>

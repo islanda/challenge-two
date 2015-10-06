@@ -149,6 +149,7 @@ label div {
 	height: 30px;
 	margin: 3px;
 	width: 44px;
+	cursor: pointer;
 }
 
 label[for=americanexpress] div {
@@ -171,9 +172,14 @@ label[for=mastercard] div {
 	opacity: .5;
 }
 
-label > input {
-  display:none;
+label > input { /* hide radio buttons */
   position: absolute;
+  left: -9999px;
+}
+
+.credit-cards p { /* hide text */
+  position: absolute;
+  left: -9999px;
 }
 
 label > input:checked + div {
@@ -181,9 +187,15 @@ label > input:checked + div {
   opacity: 1;
 }
 
-.security input {
+label[for=code] {
 	display: block;
+}
+
+.security input {
+	display: inline-block;
+	float: left;
 	width: 50px;
+	margin-right: 10px;
 }
 
 .security div {
@@ -191,11 +203,12 @@ label > input:checked + div {
 */	background: url('../images/sprite.png') no-repeat  0 -124px;
 	height: 33px;
 	width: 68px;
+	float: left;
 }
-
 
 .expdate {
 	margin-left: -10px; 
+	margin-top: 40px;
 }
 
 /*submit button*/

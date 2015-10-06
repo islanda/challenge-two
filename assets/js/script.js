@@ -1,1 +1,1 @@
-/* Your JavaScript goes here */
+onLoad="self.focus();document.whoo.portfolio-name.focus()"

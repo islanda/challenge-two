@@ -44,7 +44,7 @@ fieldset {
 }
 
 form > fieldset > legend:before {
-	background: #15718c;
+	background: #52a3d4;
 	border-radius:    -moz-border-radius: 50%;
 	border-radius: -webkit-border-radius: 50%;	
 	border-radius: 50%;
@@ -54,7 +54,7 @@ form > fieldset > legend:before {
 	counter-increment: fieldsets;
 	display: inline-block;
 	margin:  0 25px 0 -60px;
-	padding: 5px 10px;
+	padding: 5px 11px;
 }
 
 .sections {
@@ -77,19 +77,21 @@ input {
 	border-radius: -webkit-border-radius: 3px;	
 	border-radius: 3px;
 	border: none;
-	height: 20px;
+	border-top: 2px solid #ccc;
+	height: 25px;
 	margin: 10px 0;
+	padding-left: 5px;
 	width: 100%;
 }
 
 /*validation*/
 input:focus:required:invalid {
-	background: url('../images/sprite.png') no-repeat right -190px;
+	background: url('../images/sprite.png') no-repeat right -188px;
 	background-color: #fff;
 }
 
 input:required:valid {
-	background: url('../images/sprite.png') no-repeat right -165px;
+	background: url('../images/sprite.png') no-repeat right -163px;
 	background-color: #fff;
 }
 
@@ -103,24 +105,25 @@ input:required:valid {
 /*section 1*/
 #portfolio-address {
 	display: block;
-	width: 65%;
+	width: 64%;
 }
 
 #sample {
 	background: #fafafa;
-	border-left: 1px solid #eee;
+	border-left: 1px solid #ddd;
 	border-radius:    -moz-border-radius: 0 3px 3px 0;
 	border-radius: -webkit-border-radius: 0 3px 3px 0;	
 	border-radius: 0 3px 3px 0;
+	border-top: 2px solid #ccc;
 	color: #b2b2b2;
 	float: right;
-	font-size: 1.25em;
-	height: 18px;
-	margin: -32px -2px;
-	padding: 2px;
+	font-size: 1em;
+	height: 22px;
+	margin: -39px -1px;
+	padding-top: 5px;
 	position: relative;
 	text-align: center;
-	width: 34%;
+	width: 35%;
 }
 
 /*section 2*/
@@ -141,7 +144,7 @@ input:required:valid {
 
 /*credit cards*/
 .credit-cards {
-	padding-top: 22px;
+	padding-top: 33px;
 	margin-bottom: 40px;
 }
 
@@ -154,22 +157,22 @@ label div {
 
 label[for=americanexpress] div {
 	background: url('../images/sprite.png') no-repeat left 0;
-	opacity: .5;
+	opacity: .3;
 }
 
 label[for=visa] div {
 	background: url('../images/sprite.png') no-repeat -46px 0;
-	opacity: .5;
+	opacity: .3;
 }
 
 label[for=discover] div {
 	background: url('../images/sprite.png') no-repeat -94px 0;
-	opacity: .5;
+	opacity: .3;
 }
 
 label[for=mastercard] div {
 	background: url('../images/sprite.png') no-repeat -142px 0;
-	opacity: .5;
+	opacity: .3;
 }
 
 label > input { /* hide radio buttons */
@@ -204,6 +207,7 @@ label[for=code] {
 	height: 33px;
 	width: 68px;
 	float: left;
+	margin-top: 9px;
 }
 
 .expdate {
@@ -224,7 +228,7 @@ button {
 	border-radius:    -moz-border-radius: 5px;
 	border-radius: -webkit-border-radius: 5px;	
 	border-radius: 5px;
-	border: 1px solid #7e9935;
+	border: 1px solid #7f9b33;
 	color: white;
 	font-family:'Merriweather', serif;
 	font-size: .75em;

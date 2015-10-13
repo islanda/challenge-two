@@ -175,10 +175,6 @@ label[for=mastercard] div {
 	opacity: .3;
 }
 
-label div.cc-opacity {
-	opacity: 1;
-}
-
 label > input { /* hide radio buttons */
   position: absolute;
   left: -9999px;
@@ -190,8 +186,11 @@ label > input { /* hide radio buttons */
 }
 
 label > input:checked + div {
-  border: 2px solid #b3e3ff;
   opacity: 1;
+}
+
+label div.cc-opacity {
+	opacity: 1;
 }
 
 label[for=code] {

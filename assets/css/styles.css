@@ -155,7 +155,7 @@ label div {
 	cursor: pointer;
 }
 
-label[for=americanexpress] div {
+label[for=amex] div {
 	background: url('../images/sprite.png') no-repeat left 0;
 	opacity: .3;
 }
@@ -173,6 +173,10 @@ label[for=discover] div {
 label[for=mastercard] div {
 	background: url('../images/sprite.png') no-repeat -142px 0;
 	opacity: .3;
+}
+
+label div.cc-opacity {
+	opacity: 1;
 }
 
 label > input { /* hide radio buttons */

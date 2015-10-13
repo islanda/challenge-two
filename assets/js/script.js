@@ -18,7 +18,7 @@ Call jQuery Credit Card Validator plugin
 */
 
 $('#card').validateCreditCard(function(result) {
-	alert('CC type: ' + result.card_type.name);
+	// alert('CC type: ' + result.card_type.name);
+	$('label[for='+ result.card_type.name +'] div').addClass('cc-opacity');
 });
 
-// Take the (result.card_type.name) and .fadeTo ("fast" , 1);

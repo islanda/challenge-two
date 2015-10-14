@@ -81,8 +81,8 @@ input {
 	font-size: 1.25em;
 	height: 30px;
 	margin: 10px 0;
-	padding-left: 10px;
-	width: 100%;
+	padding: 1px 12px;
+	width: 95%;
 }
 
 /*validation*/
@@ -104,7 +104,7 @@ input:required:valid {
 /*section 1*/
 #portfolio-address {
 	display: block;
-	width: 65%;
+	width: 62.5%;
 }
 
 #sample {
@@ -114,15 +114,15 @@ input:required:valid {
 	-moz-border-radius: 0 3px 3px 0;
 	-webkit-border-radius: 0 3px 3px 0;
 	border-top: 2px solid #ccc;
-	color: #888;
+	color: #a4a4a4;
 	float: right;
-	font-size: 1.25em;
+	font-size: 1.125em;
 	height: 27px;
-	margin: -44px -9px;
+	margin: -44px -2px;
 	padding-top: 5px;
 	position: relative;
 	text-align: center;
-	width: 35%;
+	width: 33%;
 }
 
 /*section 2*/
@@ -208,7 +208,7 @@ label[for=code] {
 	height: 33px;
 	width: 68px;
 	float: left;
-	margin-top: 11px;
+	margin-top: 12px;
 }
 
 .expdate {
@@ -240,4 +240,45 @@ button {
 	font-family:'Merriweather', serif;
 	font-size: 1em;
 	padding: 6px 21px;
+}
+
+/*Parsley*/
+input.parsley-success,
+select.parsley-success,
+textarea.parsley-success {
+  /*color: #468847;*/
+  background-color: #DFF0D8;
+  /*border: 1px solid #D6E9C6;*/
+}
+
+input.parsley-error,
+select.parsley-error,
+textarea.parsley-error {
+  /*color: #B94A48;*/
+  background-color: #F2DEDE;
+  /*border: 1px solid #EED3D7;*/
+}
+
+.parsley-errors-list {
+  margin: 1px 0 1px;
+  list-style-type: none;
+  font-size: 0.9em;
+  line-height: 0.9em;
+  opacity: 0;
+
+  transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+
+li.parsley-required, li.parsley-type{
+/*	display: none;
+*/	text-indent: -999px;
+	padding: 0;
+	margin:-5.5px;
 }

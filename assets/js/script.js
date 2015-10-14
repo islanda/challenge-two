@@ -10,6 +10,12 @@ $('#card').validateCreditCard(function(result) {
 
 Modernizr.load({
 	test : Modernizr.input.required,
-	nope : ['assets/js/parsley.min.js']
-		$('#form').parsley();
+	nope : {
+		'parsley': 'assets/js/parsley.min.js'	
+	},
+	callback: {	
+		'parsley': function (url, result, key) {
+			$('#form').parsley();
+		}
+  	}
 });

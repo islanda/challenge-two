@@ -156,21 +156,25 @@ label div {
 label[for=amex] div {
 	background: url('../images/sprite.png') no-repeat left 0;
 	opacity: .3;
+	filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
 label[for=visa] div {
 	background: url('../images/sprite.png') no-repeat -46px 0;
 	opacity: .3;
+	filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
 label[for=discover] div {
 	background: url('../images/sprite.png') no-repeat -94px 0;
 	opacity: .3;
+	filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
 label[for=mastercard] div {
 	background: url('../images/sprite.png') no-repeat -142px 0;
 	opacity: .3;
+	filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
 label > input { /* hide radio buttons */
@@ -185,10 +189,12 @@ label > input { /* hide radio buttons */
 
 label > input:checked + div {
   opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
 label div.cc-opacity {
 	opacity: 1;
+	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
 label[for=code] {
@@ -242,43 +248,20 @@ button {
 	padding: 6px 21px;
 }
 
-/*Parsley*/
-input.parsley-success,
-select.parsley-success,
-textarea.parsley-success {
-  /*color: #468847;*/
-  background-color: #DFF0D8;
-  /*border: 1px solid #D6E9C6;*/
+/*Modernizr*/
+
+.no-opacity label[for=amex] div {
+	background: url('../images/sprite.png') no-repeat left -42px;
 }
 
-input.parsley-error,
-select.parsley-error,
-textarea.parsley-error {
-  /*color: #B94A48;*/
-  background-color: #F2DEDE;
-  /*border: 1px solid #EED3D7;*/
+.no-opacity label[for=visa] div {
+	background: url('../images/sprite.png') no-repeat -46px -40px;
 }
 
-.parsley-errors-list {
-  margin: 1px 0 1px;
-  list-style-type: none;
-  font-size: 0.9em;
-  line-height: 0.9em;
-  opacity: 0;
-
-  transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
+.no-opacity label[for=discover] div {
+	background: url('../images/sprite.png') no-repeat -94px -40px;
 }
 
-.parsley-errors-list.filled {
-  opacity: 1;
-}
-
-li.parsley-required, li.parsley-type{
-/*	display: none;
-*/	text-indent: -999px;
-	padding: 0;
-	margin:-5.5px;
+.no-opacity label[for=mastercard] div {
+	background: url('../images/sprite.png') no-repeat -142px -40px;
 }

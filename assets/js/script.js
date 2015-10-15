@@ -1,11 +1,8 @@
 $('#card').validateCreditCard(function(result) {
 	// alert('CC type: ' + result.card_type.name);
 	$('label[for='+ result.card_type.name +'] input').prop("checked", true);
-// });
 
-// When AMEX is checked or true the - 
-// $('#card').validateCreditCard(function(result) {
-	// alert(result.card_type.name);
+// When AMEX is checked or true - 
 	if (result.card_type.name === 'amex') {
 		$('.cvv').css('background-position','0 -82px');
 	}

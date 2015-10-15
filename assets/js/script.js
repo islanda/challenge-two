@@ -1,12 +1,18 @@
 $('#card').validateCreditCard(function(result) {
 	// alert('CC type: ' + result.card_type.name);
 	$('label[for='+ result.card_type.name +'] input').prop("checked", true);
-});
+// });
 
 // When AMEX is checked or true the - 
 // $('#card').validateCreditCard(function(result) {
-// 	$('.security div' +  result.card_type.name).css('background-position','no-repeat 0 -81px');
-// });
+	// alert(result.card_type.name);
+	if (result.card_type.name === 'amex') {
+		$('.cvv').css('background-position','0 -82px');
+	}
+	else {
+		$('.cvv').css('background-position','0 -124px');
+	}
+});
 
 Modernizr.load({
 	test : Modernizr.input.required,

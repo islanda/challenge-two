@@ -22,7 +22,7 @@ Modernizr.load({
 	},
 	callback: {	
 		'parsley': function (url, result, key) {
-			$('#form').parsley();
+			$('#whoo-form').parsley();
 		}
   	}
 });

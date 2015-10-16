@@ -5,22 +5,9 @@ body {
 	padding: 10px 0;
 }
 
-form {
-	background: #fff;	
-	border-radius: 0px 0px 10px 10px;
-	-moz-border-radius: 0px 0px 10px 10px;
-	-webkit-border-radius: 0px 0px 10px 10px;
-	counter-reset: fieldsets;
-	margin: 0 auto;
-	padding: 25px;
-	width: 550px;
-}
-
 header {
 	background: #15718c;
 	border-radius: 10px 10px 0px 0px;
-	-moz-border-radius: 10px 10px 0px 0px;
-	-webkit-border-radius: 10px 10px 0px 0px;	
 	margin: 0 auto;
 	padding: 5px 25px;
 	width: 550px;
@@ -39,14 +26,21 @@ header p {
 	margin-top: -20px; 
 }
 
-fieldset {
+#whoo-form {
+	background: #fff;	
+	border-radius: 0px 0px 10px 10px;
+	counter-reset: fieldsets;
+	margin: 0 auto;
+	padding: 25px;
+	width: 550px;
+}
+
+#whoo-form fieldset {
 	border: none;
 }
 
-form > fieldset > legend:before {
-	background: #52a3d4;
-	border-radius:    -moz-border-radius: 50%;
-	border-radius: -webkit-border-radius: 50%;	
+#whoo-form > fieldset > legend:before {
+	background: #52a3d4;	
 	border-radius: 50%;
 	border: 5px solid white;
 	color: white;
@@ -59,23 +53,19 @@ form > fieldset > legend:before {
 
 .sections {
 	background: #eee;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;	
+	border-radius: 5px;	
 	margin-top: -5px;
 	padding: 10px;
 }
 
-li {
+.sections li {
 	font-size: .75em;
 	list-style: none;
 	padding: 10px 20px;
 }
 
-input {	
+.sections input {	
 	border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
 	border: none;
 	border-top: 2px solid #ccc;
 	font-size: 1.25em;
@@ -86,11 +76,11 @@ input {
 }
 
 /*validation*/
-input:focus:required:invalid {
+.sections input:focus:required:invalid {
 	background: #fff url('../images/sprite.png') no-repeat right -186px;
 }
 
-input:required:valid {
+.sections input:required:valid {
 	background: #fff url('../images/sprite.png') no-repeat right -160px;
 }
 
@@ -111,8 +101,6 @@ input:required:valid {
 	background: #fafafa;
 	border-left: 1px solid #ddd;	
 	border-radius: 0 3px 3px 0;
-	-moz-border-radius: 0 3px 3px 0;
-	-webkit-border-radius: 0 3px 3px 0;
 	border-top: 2px solid #ccc;
 	color: #a4a4a4;
 	float: right;
@@ -132,7 +120,7 @@ input:required:valid {
 }
 
 /*section 3*/
-.card-number, label div {
+.card-number, .cc-type {
 	float: left;
 }
 
@@ -142,15 +130,20 @@ input:required:valid {
 
 /*credit cards*/
 .credit-cards {
-	padding-top: 37px;
+	margin-top: 25px;
 	margin-bottom: 40px;
 }
 
-label div {
+.cc-type {
+	cursor: pointer;
 	height: 30px;
 	margin: 3px;
 	width: 44px;
-	cursor: pointer;
+}
+
+.sections label > input { /* hide radio buttons */
+  position: absolute;
+  left: -9999px;
 }
 
 label[for=amex] div {
@@ -177,22 +170,17 @@ label[for=mastercard] div {
 	filter: alpha(opacity=30); /* For IE8 and earlier */
 }
 
-label > input { /* hide radio buttons */
-  position: absolute;
-  left: -9999px;
-}
-
 .credit-cards p { /* hide text */
   position: absolute;
   left: -9999px;
 }
 
-label > input:checked + div {
+.sections label > input:checked + div {
   opacity: 1;
   filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
-label div.cc-opacity {
+.sections label div.cc-opacity {
 	opacity: 1;
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
@@ -228,20 +216,17 @@ label[for=month], label[for=year] {
 	text-indent: -9999px;
 }
 
-
 /*submit button*/
-.btn {
+.whoo-btn {
 	text-align: center;
 }
 
 button {
-	background: #7f9b33 linear-gradient(#90a932, #7f9b33);
 	-moz-linear-gradient(#90a932, #7f9b33);
 	-webkit-linear-gradient(#90a932, #7f9b33);	
+	background: #7f9b33 linear-gradient(#90a932, #7f9b33);
 	border: 1px solid #7f9b33;
 	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;	
 	color: white;
 	font-family:'Merriweather', serif;
 	font-size: 1em;

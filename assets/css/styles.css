@@ -35,11 +35,11 @@ header p {
 	width: 550px;
 }
 
-#whoo-form fieldset {
+fieldset {
 	border: none;
 }
 
-#whoo-form > fieldset > legend:before {
+form > fieldset > legend:before {
 	background: #52a3d4;	
 	border-radius: 50%;
 	border: 5px solid white;
@@ -130,8 +130,8 @@ header p {
 
 /*credit cards*/
 .credit-cards {
-	margin-top: 25px;
-	margin-bottom: 40px;
+	margin: 25px 0px 40px 0;
+
 }
 
 .cc-type {
@@ -180,7 +180,7 @@ label[for=mastercard] div {
   filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
-.sections label div.cc-opacity {
+.cc-opacity {
 	opacity: 1;
 	filter: alpha(opacity=100); /* For IE8 and earlier */
 }
@@ -190,15 +190,13 @@ label[for=code] {
 }
 
 .security input {
-	display: inline-block;
 	float: left;
 	width: 50px;
 	margin-right: 10px;
 }
 
 .security div {
-/*	background: url('../images/sprite.png') no-repeat  0 -81px;
-*/	background: url('../images/sprite.png') no-repeat  0 -124px;
+	background: url('../images/sprite.png') no-repeat  0 -124px;
 	height: 33px;
 	width: 68px;
 	float: left;
@@ -222,8 +220,8 @@ label[for=month], label[for=year] {
 }
 
 button {
-	-moz-linear-gradient(#90a932, #7f9b33);
-	-webkit-linear-gradient(#90a932, #7f9b33);	
+	background: -moz-linear-gradient(#90a932, #7f9b33);
+	background: -webkit-linear-gradient(#90a932, #7f9b33);	
 	background: #7f9b33 linear-gradient(#90a932, #7f9b33);
 	border: 1px solid #7f9b33;
 	border-radius: 5px;
